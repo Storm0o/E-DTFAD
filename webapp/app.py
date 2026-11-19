@@ -223,7 +223,10 @@ def process_image():
     })
 
 
+import os
+
 if __name__ == '__main__':
     print("\n  DTFAD Web Demo")
-    print("  Open http://localhost:5000 in your browser\n")
-    app.run(debug=False, port=5000)
+    port = int(os.environ.get("PORT", 10000))
+    print(f"  Running on port {port}\n")
+    app.run(host='0.0.0.0', port=port, debug=False)
