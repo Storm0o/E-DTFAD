@@ -4,7 +4,7 @@
 
 > An enhanced implementation of the DTFAD framework for speckle noise removal in medical and SAR images, with four novel algorithmic improvements and a web-based interactive demo.
 
-🌐 **Live Demo:** [https://e-dtfad.onrender.com/](https://e-dtfad.onrender.com/)
+ [https://e-dtfad.onrender.com/](https://e-dtfad.onrender.com/)
 
 ---
 
