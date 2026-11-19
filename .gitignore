@@ -1,85 +1,45 @@
-# ============================================================
-# E-DTFAD Project .gitignore
-# ============================================================
-
-# --- Python ---
+# Python
 __pycache__/
 *.py[cod]
 *.pyo
 *.pyd
-.Python
 *.egg
 *.egg-info/
 dist/
 build/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
-*.so
 .env
 .venv
 env/
 venv/
-ENV/
 
-# --- Jupyter / IPython ---
-.ipynb_checkpoints/
-*.ipynb
-
-# --- Pytest / Testing ---
+# Testing
 .pytest_cache/
-.tox/
 .coverage
 htmlcov/
-*.cover
-.hypothesis/
 
-# --- Large Dataset / Raw Images ---
-# Keep the Dataset folder structure but exclude heavy image sets
-Dataset/BSDS500/
-Dataset/Set12/
-Dataset/BM3D test imgae/
-Dataset/BSD300/
-Dataset/Train400/
+# Dataset (large images)
+Dataset/
 *.mat
 *.h5
 *.hdf5
 
-# --- Large model weights ---
+# Model weights
 *.pth
 *.pt
 
-# --- Logs ---
-*.log
-logs/
-
-# --- Temporary / generated files ---
-*.tmp
-*.bak
-*.swp
-*~
-Thumbs.db
-.DS_Store
-desktop.ini
-
-# --- LaTeX report folder (kept locally, not on GitHub) ---
+# LaTeX report (kept locally)
 latex_report/
 
-# --- Large generated archives (keep the .tex source, not the zip) ---
+# Large generated files
 DTFAD_IEEE_LaTeX_Package.zip
 DTFAD_LaTeX_Report_Package.zip
 latex_report.zip
-
-# --- Large Word / intermediate docs (keep the PDF and LaTeX) ---
 DTFAD_Final_Comprehensive_Comparison_Report.docx
 DTFAD_Enhancements_Mathematical_Analysis.docx
+DTFAD_IEEE_Transactions_Report.pdf
+IEEE_DTFAD_Comparison_Report.tex
 
-# --- LaTeX build artifacts ---
+# LaTeX build artifacts
 *.aux
 *.bbl
 *.blg
@@ -92,9 +52,19 @@ DTFAD_Enhancements_Mathematical_Analysis.docx
 *.lot
 *.lof
 
-# --- Keep these explicitly ---
-!report_figures/
-!latex_report/
-!latex_report/figures/
-!results/
-!benchmark_results_all.json
+# Temporary scripts
+generate_doc.py
+test_high_noise_bsds500.py
+
+# OS files
+Thumbs.db
+.DS_Store
+desktop.ini
+
+# Logs
+*.log
+logs/
+*.tmp
+*.bak
+*.swp
+*~

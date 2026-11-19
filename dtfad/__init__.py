@@ -1,12 +1,14 @@
 """
-DTFAD — Dynamical Threshold-Based Fractional Anisotropic Diffusion
+DTFAD - Dynamical Threshold-Based Fractional Anisotropic Diffusion
 for speckle noise removal.
 
-Upgraded implementation featuring:
-  - Spatially adaptive fractional order α (Task A)
+Enhanced implementation (E-DTFAD) featuring:
+  - Spatially adaptive fractional order alpha (Task A)
   - MAD-based automated thresholding (Task B)
   - Bilateral filter pre-smoothing for GLI (Task C)
   - Dynamic GL derivative truncation (Task D)
+
+Authors: Aman Yadav & Aayush Kumar
 """
 
 from .adaptive_alpha import compute_gradient_magnitude, map_alpha
