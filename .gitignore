@@ -67,6 +67,9 @@ Thumbs.db
 .DS_Store
 desktop.ini
 
+# --- LaTeX report folder (kept locally, not on GitHub) ---
+latex_report/
+
 # --- Large generated archives (keep the .tex source, not the zip) ---
 DTFAD_IEEE_LaTeX_Package.zip
 DTFAD_LaTeX_Report_Package.zip
