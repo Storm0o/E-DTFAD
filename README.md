@@ -4,6 +4,8 @@
 
 > An enhanced implementation of the DTFAD framework for speckle noise removal in medical and SAR images, with four novel algorithmic improvements and a web-based interactive demo.
 
+🌐 **Live Demo:** [https://e-dtfad.onrender.com/](https://e-dtfad.onrender.com/)
+
 ---
 
 ## 📋 Overview
@@ -57,13 +59,10 @@ Vision/
 ├── webapp/                       # Flask web application (demo)
 │   ├── app.py                    # Main Flask server
 │   ├── static/
-│   │   └── app.js
+│   │   ├── app.js
+│   │   └── style.css
 │   └── templates/
 │       └── index.html
-│
-├── latex_report/                 # IEEE-format LaTeX report
-│   ├── DTFAD_Comparison_Report.tex
-│   └── figures/                  # 47 comparison + chart figures
 │
 ├── report_figures/               # Result images & comparison grids
 │   ├── *_comparison_grid.png     # Side-by-side method comparison
@@ -74,6 +73,8 @@ Vision/
 ├── benchmark_dtfad.py            # Benchmark runner
 ├── benchmark_original_vs_upgraded.py
 ├── requirements.txt
+├── Procfile
+├── render.yaml
 └── README.md
 ```
 
@@ -81,18 +82,18 @@ Vision/
 
 ## 🚀 Quick Start
 
-### 1. Install Dependencies
+### 1. Try Online Demo
+Access the live interactive application directly at:
+👉 **[https://e-dtfad.onrender.com/](https://e-dtfad.onrender.com/)**
+
+### 2. Local Setup
 ```bash
 pip install -r requirements.txt
-```
-
-### 2. Run the Web Demo
-```bash
 python webapp/app.py
 ```
 Then open **http://localhost:5000** in your browser.
 
-Upload any grayscale image, choose a speckle noise level (L = 1, 4, or 10 looks), and compare all 6 denoising methods side-by-side with live PSNR/SSIM metrics.
+Upload any grayscale image, choose a speckle noise level (L = 1, 4, or 10 looks), and compare Original DTFAD vs Upgraded E-DTFAD side-by-side with live PSNR/SSIM metrics.
 
 ### 3. Run Benchmarks
 ```bash
@@ -115,31 +116,15 @@ python benchmark_original_vs_upgraded.py
 
 ---
 
-## 📄 Report
+## 🌐 Deployment
 
-The full IEEE-format comparison report is in `latex_report/DTFAD_Comparison_Report.tex`.
+The webapp is deployed on Render at:
+**[https://e-dtfad.onrender.com/](https://e-dtfad.onrender.com/)**
 
-**To compile on Overleaf:**
-1. Download or clone this repo
-2. Upload the `latex_report/` folder to [Overleaf](https://www.overleaf.com)
-3. Set the main file to `DTFAD_Comparison_Report.tex`
-4. Click Compile
-
-A pre-compiled PDF (`DTFAD_IEEE_Transactions_Report.pdf`) is also included.
-
----
-
-## 🌐 Deploy the Webapp
-
-### Render (Free Tier)
-1. Fork this repo on GitHub
-2. Go to [render.com](https://render.com) → New Web Service → connect your fork
-3. Build command: `pip install -r requirements.txt`
-4. Start command: `python webapp/app.py`
-
-### Railway
-1. Connect this repo at [railway.app](https://railway.app)
-2. It auto-detects Python; set start command to `python webapp/app.py`
+Configuration details:
+- **Build Command:** `pip install -r requirements.txt`
+- **Start Command:** `python webapp/app.py`
+- Configuration file: `render.yaml` / `Procfile`
 
 ---
 
@@ -152,6 +137,8 @@ scipy
 flask
 scikit-image
 matplotlib
+Pillow
+gunicorn
 ```
 
 ---
